@@ -54,6 +54,27 @@
 
  */
 
-function romanNumeral(num){
-    
+function romanNumeral(num) {
+    numLength = num.toString().length;
+
+    if (numLength === 1) {
+        let rnum = ones(
+
+            [num == 1, 'I'],
+            [num == 2, 'II'],
+            [num == 3, 'III'],
+            [num == 4, 'IV'],
+            [num == 5, 'V'],
+            [num == 6, 'VI'],
+            [num == 7, 'VII'],
+            [num == 8, 'VIII'],
+            [num == 9, 'IX'],
+            [num == 0, ''],
+
+        )
+    }
+    return ones
 }
+
+}
+romanNumeral(4)
