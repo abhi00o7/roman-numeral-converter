@@ -55,7 +55,7 @@
  */
 
 function romanNumeral(num) {
-   const rNumeral = {
+    const rNumeral = {
         1: {
             1: 'I',
             2: 'II',
@@ -122,13 +122,18 @@ function romanNumeral(num) {
             8: 'D\u{0305}C\u{0305}C\u{0305}C\u{0305}',
             9: 'C\u{0305}M\u{0305}',
         },
+        7: {
+            1: 'M\u{0305}',
+            2: 'M\u{0305}M\u{0305}',
+            3: 'M\u{0305}M\u{0305}M\u{0305}',
+        }
     }
     // Driver Code
     return num
-            .toString()
-            .split('')
-            .map((item, index) => item = rNumeral[ num.toString().length - index][item]  )
-            .join('')
+        .toString()
+        .split('')
+        .map((item, index) => item = rNumeral[num.toString().length - index][item])
+        .join('')
 }
 
 // let number = 14
@@ -143,5 +148,5 @@ console.log(romanNumeral(77227))
 console.log(romanNumeral(82))
 console.log(romanNumeral(978))
 console.log(romanNumeral(999999))
-
-
+console.log(romanNumeral(1000000))
+console.log(romanNumeral(1999999))
