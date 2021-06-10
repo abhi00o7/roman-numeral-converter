@@ -133,7 +133,7 @@ function romanNumeral(num) {
     // Driver Code
     // Range Limit
 
-    return (num === 0 || num > 3999999) ? {
+    return (num <= 0 || num > 3999999) ? {
             range: '1 >>> 3999999'
         } : num
             .toString()
@@ -159,3 +159,4 @@ console.log(romanNumeral(1000000))
 console.log(romanNumeral(3999999))
 console.log(romanNumeral(0))
 console.log(romanNumeral(4000000))
+console.log(romanNumeral(-21))
