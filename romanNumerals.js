@@ -55,7 +55,7 @@
  */
 
 function romanNumeral(num) {
-    rNumeral = {
+   const rNumeral = {
         1: {
             1: 'I',
             2: 'II',
@@ -94,15 +94,35 @@ function romanNumeral(num) {
             2: 'MM',
             3: 'MMM',
             4: 'MV\u{0305}',
-            6: 'V\u{0305}',
-            7: 'V\u{0305}M',
-            5: 'V\u{0305}MM',
+            5: 'V\u{0305}',
+            6: 'V\u{0305}M',
+            7: 'V\u{0305}MM',
             8: 'V\u{0305}MMM',
             9: 'X\u{0305}',
         }
     }
 
-    // console.log(rNumeral[1][2])
-    return true;
+    let numArray = num
+                .toString()
+                .split('')
+    let numLength = num.toString().length
+
+
+    for (let index = 0; index < numLength; index++) {
+        numArray[index] = rNumeral[numLength-index][numArray[index]]        
+    }
+    // console.log(numArray)
+    return numArray.join('')
 }
-console.log(romanNumeral())
+// let number = 14
+// console.log(romanNumeral(10))
+// console.log(romanNumeral(1))
+// console.log(romanNumeral(2))
+// console.log(romanNumeral(3))
+// console.log(romanNumeral(4))
+// console.log(romanNumeral(5))
+// console.log(romanNumeral(6))
+// console.log(romanNumeral(7))
+// console.log(romanNumeral(8))
+// console.log(romanNumeral(9))
+console.log(romanNumeral(0))
