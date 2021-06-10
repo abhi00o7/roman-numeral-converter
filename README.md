@@ -1,5 +1,6 @@
 # roman-numeral-converter
- converts normal intergs to ROMAN numerals written to showcase javaScript skills 
+ ## range: '1 >>> 3999999'
+converts normal intergs to ROMAN numerals written to showcase javaScript skills 
  
   * The rules of roman numerals:
  * ==============================
