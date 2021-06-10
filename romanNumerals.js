@@ -123,28 +123,25 @@ function romanNumeral(num) {
             9: 'C\u{0305}M\u{0305}',
         },
     }
-
-    let numArray = num
-                .toString()
-                .split('')
-    let numLength = num.toString().length
-
-
-    for (let index = 0; index < numLength; index++) {
-        numArray[index] = rNumeral[numLength-index][numArray[index]]        
-    }
-    // console.log(numArray)
-    return numArray.join('')
+    // Driver Code
+    return num
+            .toString()
+            .split('')
+            .map((item, index) => item = rNumeral[ num.toString().length - index][item]  )
+            .join('')
 }
+
 // let number = 14
-// console.log(romanNumeral(10))
-// console.log(romanNumeral(1))
-// console.log(romanNumeral(2))
-// console.log(romanNumeral(3))
-// console.log(romanNumeral(4))
-// console.log(romanNumeral(5))
-// console.log(romanNumeral(6))
-// console.log(romanNumeral(7))
-// console.log(romanNumeral(8))
-// console.log(romanNumeral(9))
-console.log(romanNumeral(199999))
+console.log(romanNumeral(1))
+console.log(romanNumeral(10))
+console.log(romanNumeral(20))
+console.log(romanNumeral(3878))
+console.log(romanNumeral(45))
+console.log(romanNumeral(585))
+console.log(romanNumeral(60000))
+console.log(romanNumeral(77227))
+console.log(romanNumeral(82))
+console.log(romanNumeral(978))
+console.log(romanNumeral(999999))
+
+
