@@ -99,6 +99,17 @@ function romanNumeral(num) {
             7: 'V\u{0305}MM',
             8: 'V\u{0305}MMM',
             9: 'X\u{0305}',
+        },
+        5: {
+            1: 'X\u{0305}',
+            2: 'X\u{0305}X\u{0305}',
+            3: 'X\u{0305}X\u{0305}X\u{0305}',
+            4: 'X\u{0305}L\u{0305}',
+            5: 'L\u{0305}',
+            6: 'L\u{0305}X\u{0305}',
+            7: 'L\u{0305}X\u{0305}X\u{0305}',
+            8: 'L\u{0305}X\u{0305}X\u{0305}X\u{0305}',
+            9: 'X\u{0305}C\u{0305}',
         }
     }
 
@@ -125,4 +136,4 @@ function romanNumeral(num) {
 // console.log(romanNumeral(7))
 // console.log(romanNumeral(8))
 // console.log(romanNumeral(9))
-console.log(romanNumeral(0))
+console.log(romanNumeral(199999))
