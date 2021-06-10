@@ -55,7 +55,7 @@
  */
 
 function romanNumeral(num) {
-    
+
     // roman numeral object mapping
     const rNumeral = {
         1: {
@@ -132,14 +132,14 @@ function romanNumeral(num) {
     }
     // Driver Code
     // Range Limit
-    if (num === 0 || num > 3999999) {
-        return {range: '1 >>> 3999999'}
-    }
-    return num
-        .toString()
-        .split('')
-        .map((item, index) => item = rNumeral[num.toString().length - index][item])
-        .join('')
+
+    return (num === 0 || num > 3999999) ? {
+            range: '1 >>> 3999999'
+        } : num
+            .toString()
+            .split('')
+            .map((item, index) => item = rNumeral[num.toString().length - index][item])
+            .join('')
 }
 
 // test cases
@@ -157,6 +157,5 @@ console.log(romanNumeral(978))
 console.log(romanNumeral(999999))
 console.log(romanNumeral(1000000))
 console.log(romanNumeral(3999999))
-// console.log(romanNumeral(0))
-// console.log(romanNumeral(4000000))
-
+console.log(romanNumeral(0))
+console.log(romanNumeral(4000000))
